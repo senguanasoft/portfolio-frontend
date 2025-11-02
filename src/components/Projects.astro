@@ -1,0 +1,41 @@
+---
+const projects = [
+  {
+    title: "Sistema POS",
+    description: "Aplicación de punto de venta con Angular y TypeScript.",
+    link: "https://github.com/tuusuario/pos-app",
+  },
+  {
+    title: "Gestor de Productos",
+    description: "Plataforma para gestión de inventario y ventas.",
+    link: "https://github.com/tuusuario/product-manager",
+  },
+  {
+    title: "Calculadora de Pago",
+    description:
+      "Interfaz de calculadora moderna con Angular y diseño responsive.",
+    link: "https://github.com/tuusuario/calculadora-pago",
+  },
+];
+---
+
+<section id="projects" class="py-20 bg-gray-800 text-center">
+  <h2 class="text-3xl font-bold mb-10 text-pink-400">Proyectos</h2>
+  <div class="grid md:grid-cols-3 gap-8 px-6">
+    {
+      projects.map((p) => (
+        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform">
+          <h3 class="text-xl font-semibold mb-2">{p.title}</h3>
+          <p class="text-gray-400 mb-4">{p.description}</p>
+          <a
+            href={p.link}
+            target="_blank"
+            class="text-pink-400 hover:underline"
+          >
+            Ver en GitHub →
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>
